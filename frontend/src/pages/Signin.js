@@ -13,7 +13,7 @@ export const Signin = () => {
   });
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get("http://localhost:4000/users").then((res) => setUsers(res.data));
+    axios.get("https://popx-backend.vercel.app/users").then((res) => setUsers(res.data));
   }, []);
 
   async function submitHandler(e) {
@@ -22,7 +22,7 @@ export const Signin = () => {
       alert("User already exists.");
       navigate("/login");
     } else {
-      const res = await axios.post("http://localhost:4000/users", entry);
+      const res = await axios.post("https://popx-backend.vercel.app/users", entry);
       setUsers((prev) => [...prev, res.data]);
       console.log(users);
       alert("Account created successfully");
