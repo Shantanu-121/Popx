@@ -4,11 +4,12 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors(
-  {
-    origin: "*"
-  }
-));
+app.use(cors({
+  origin: 'https://popx-frontend-mu.vercel.app', // Allow only your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],     // Adjust methods as needed
+  credentials: true                              // If you use cookies or auth headers
+}));
+
 app.use(express.json());
 
 mongoose
