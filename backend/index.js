@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({
-  origin: 'https://popx-frontend-mu.vercel.app', // Allow only your frontend
+  origin: 'https://popx-frontend-roan.vercel.app', // Allow only your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'],     // Adjust methods as needed
   credentials: true                              // If you use cookies or auth headers
 }));
@@ -35,6 +35,10 @@ const User = mongoose.model("User", {
   password: String,
   companyName: String,
   agency: String,
+});
+
+app.get("/",(req,res) => {
+  res.json("HELLO");
 });
 
 // API route to get all users
