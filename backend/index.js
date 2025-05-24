@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors(
   {
-    origin: ["https://popx-frontend-mu.vercel.app/"],
+    origin: ["https://popx-frontend-shantanu-121s-projects.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
   }
