@@ -4,11 +4,9 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
-
 app.use(cors(
   {
-    origin: "https://popx-frontend-mu.vercel.app/login"
+    origin: "*"
   }
 ));
 app.use(express.json());
