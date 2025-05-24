@@ -8,7 +8,7 @@ app.use(cors());
 
 app.use(cors(
   {
-    origin: "https://popx-frontend-mu.vercel.app"
+    origin: "https://popx-frontend-mu.vercel.app/login"
   }
 ));
 app.use(express.json());
