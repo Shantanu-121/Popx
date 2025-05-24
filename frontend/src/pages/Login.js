@@ -10,7 +10,7 @@ export const Login = () => {
   const navigate = useNavigate();
   async function submitHandler(e) {
     e.preventDefault();
-    const res = await axios.get("http://localhost:4000/users");
+    const res = await axios.get("https://popx-backend.vercel.app/users");
     const users = res.data;
     if (
       users.some(
