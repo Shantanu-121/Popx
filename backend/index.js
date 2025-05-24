@@ -3,11 +3,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
+
+app.use(cors());
+
 app.use(cors(
   {
-    origin: ["https://popx-frontend-shantanu-121s-projects.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
+    origin: "https://popx-frontend-mu.vercel.app"
   }
 ));
 app.use(express.json());
